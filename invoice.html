@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Invoice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="displayCart()">
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+
+    <h2 style="text-align:center;">Invoice</h2>
+
+    <div id="invoiceContainer">
+        <div id="cartItems"></div>
+
+        <div class="invoice-info">
+            <p id="date"></p>
+            <p>Taxes included in total</p>
+            <h3 id="total"></h3>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Display current date
+        const dateElement = document.getElementById('date');
+        const today = new Date();
+        dateElement.textContent = `Date: ${today.toLocaleDateString()}`;
+    </script>
+</body>
+</html>
